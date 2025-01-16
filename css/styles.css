@@ -1,0 +1,15 @@
+:root {
+    --primary-bg-color: #BC0724; /* Added primary background color */
+}
+
+h1 {
+    color: #f7f7f7; /* Overwritten h1 color */
+}
+
+.blog-post-title {
+    color: #BC0724; /* Overwritten h1 color */
+}
+
+a {
+    color: #BC0724; /* Changed link color */
+}

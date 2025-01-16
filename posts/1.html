@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Blog Post</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+
+</head>
+<body>
+    <div id="navbar"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <main class="container">
+
+        <div class="col-lg-6 px-0 mt-4">
+                <article class="blog-post">
+                    <img src="https://www.techsmith.com/blog/wp-content/uploads/2023/08/What-are-High-Resolution-Images.png" alt="Post Image" class="img-fluid mb-3" style="width: 50%; height: 50%;">
+                    <h1 class="blog-post-title">A Month in the Life of Our Community</h1>
+                    <p class="blog-post-meta">October 31, 2024 by <a href="#">Volunteer WW</a></p>
+                    <p>Welcome to October’s edition of our community newsletter! This month’s group chat was a delightful whirlwind of neighborly exchanges, odd dilemmas, and heartwarming camaraderie. Let’s dive into the highlights, key events, and recurring themes from the conversations.</p>
+
+                    <h2>Timeline of Key Events</h2>
+                    <ul>
+                        <li><strong>October 1-3</strong>: The “mosquito” scare dominates discussions until the entomologically inclined clarify it’s crane flies.</li>
+                        <li><strong>October 5</strong>: A lively exchange about getting CCTV footage sparks debates on privacy and GDPR.</li>
+                        <li><strong>October 10</strong>: The Northern Lights make a surprise appearance. Residents share jaw-dropping photos and camera tricks late into the night.</li>
+                        <li><strong>October 17</strong>: A full moon and “supermoon” sightings inspire philosophical musings and amateur astrophotography.</li>
+                        <li><strong>October 20</strong>: Tensions rise over antisocial behavior linked to shared podium spaces, sparking broader discussions about housing policies.</li>
+                        <li><strong>October 31</strong>: Halloween excitement builds as neighbors discuss trick-or-treat plans for the kids.</li>
+                    </ul>
+
+                    <h2>Main Topics Discussed</h2>
+                    <h3>Crane Fly Confusion</h3>
+                    <p>Early October began with a lively debate about the sudden “mosquito” infestation near the gym and concierge area. Turns out, they were crane flies (or "Daddy Longlegs"). While harmless, they inspired much discussion—and a fair share of shudders. The group’s appreciation for nature was also evident here, as the conversation expanded to the wonder of celestial sightings like the Northern Lights, sparking awe and photo exchanges.</p>
+
+                    <h3>Home Maintenance Help</h3>
+                    <p>Plumbing woes, dishwasher leaks, and limescale build-up had many residents seeking advice. From TaskRabbit recommendations to detailed DIY tutorials, neighbors were quick to pitch in with solutions. The spirit of community assistance was alive and well, with residents lending a hand through tips, services, and even contact recommendations for everything from electricians to plumbers.</p>
+
+                    <h3>Parking Predicaments</h3>
+                    <p>Parking space availability was a recurring concern, with multiple residents seeking spots for short- and long-term use. A friendly barter system seems to be thriving! In this ongoing thread, resourcefulness took center stage as neighbors offered creative solutions, including exchanges and shared spaces, to solve parking challenges.</p>
+
+                    <h3>Skyline Marvels</h3>
+                    <p>October gifted us with stunning sunsets and a rare sighting of the Northern Lights. Group members shared jaw-dropping photos and tips on capturing the magic on camera. Beyond these celestial wonders, the group demonstrated a shared appreciation for nature in all its forms, including the seasonal crane flies, and sparked further discussions about environmental concerns like building access to 5G.</p>
+
+                    <h3>Shared Resources and Tips</h3>
+                    <p>From lending saws to recommending electricians and cleaners, the chat buzzed with resource-sharing and helpful links. Whether offering a spare bike or sharing parking spaces, the group functioned as a mini-marketplace for residents. Humor and camaraderie remained key, with lighthearted jokes about everyday topics, such as the “Aurora stole the satellite signal” quip after the Northern Lights' appearance.</p>
+
+                    <h2>General Sentiment</h2>
+                    <p>The overarching mood this month was optimistic and collaborative, with a touch of curiosity-driven banter. Discussions balanced pragmatism (fixing leaks, navigating housing policies) with wonder (skywatching and sharing quirky anecdotes). While occasional frustrations—like parking shortages and antisocial behaviors—emerged, they were met with constructive solutions and group solidarity.</p>
+
+                    <h2>Closing Thoughts: Magic in the Everyday</h2>
+                    <p>October’s chat shows the magic of collective problem-solving and shared experiences. Whether you were marveling at the Northern Lights, debating the merits of WD-40, or swapping biryani recommendations, this group continues to be a microcosm of what makes our community special. The blend of practical advice and lightheartedness is what sets our conversations apart.</p>
+
+                    <p>Here’s to an equally dynamic November! Have a story or suggestion for next month? Share it with the group and keep the conversations flowing.</p>
+
+                    <p>Until next time, stay curious and stay connected! 🌟</p>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="blog-footer py-3 mt-5 border-top">
+        <div class="container text-center">
+            <p>This week in Colindale Gardens 2024.</p>
+            <p><a href="#">Back to top</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
