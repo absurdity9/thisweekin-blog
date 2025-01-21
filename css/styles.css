@@ -13,3 +13,8 @@ h1 {
 a {
     color: #BC0724; /* Changed link color */
 }
+
+.bg-body-secondary{
+    background-color: #BC0724 !important; 
+    color:#f7f7f7 !important;
+}
