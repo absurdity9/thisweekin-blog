@@ -4,34 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Blog Post</title>
-    <link href="/css/styles.css" rel="stylesheet">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
 </head>
 <body>
     <div id="navbar"></div>
-    <script>
-        fetch('/navbar.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('navbar').innerHTML = data);
-    </script>
 
     <main class="container">
+        <div class="col-lg-6 px-0 mt-4">
+            <article class="blog-post">
+                <img src="https://www.techsmith.com/blog/wp-content/uploads/2023/08/What-are-High-Resolution-Images.png" alt="Post Image" class="img-fluid mb-3" style="width: 50%; height: 50%;">
+                <h1 class="blog-post-title">November in the Community</h1>
+                <p class="blog-post-meta">November 30, 2024 by <a href="#">Volunteer WW</a></p>
+                <p>November in the group chat was a lively mix of camaraderie, shared concerns, and helpful exchanges. It felt like walking into a bustling coffee shop where each table had its own fascinating topic of conversation, ranging from tech woes to home improvement projects. Here's what unfolded.</p>
 
-        <div class="row g-5 mt-2">
-            <div class="col-md-8">
-                <article class="blog-post">
-                    <img src="https://www.techsmith.com/blog/wp-content/uploads/2023/08/What-are-High-Resolution-Images.png" alt="Post Image" class="img-fluid mb-3" style="width: 50%; height: 50%;">
-                    <h1 class="blog-post-title">November in the Community</h1>
-                    <p class="blog-post-meta">November 30, 2024 by <a href="#">Volunteer WW</a></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <!-- ...additional ipsum lorem content to reach 2000 words... -->
-                </article>
-            </div>
+                <h2>Timeline of Key Events</h2>
+                <ul>
+                    <li><strong>Early November</strong>: The chat’s activity simmered, with participants mostly engaging sporadically, likely caught up in their lives. Things took a lively turn mid-month.</li>
+                    <li><strong>Mid-November</strong>: A participant’s battery replacement query sparked practical problem-solving, while a group member’s home improvement ambitions had folks nodding along in agreement or chiming in with suggestions. Another resident’s contributions to multiple threads showcased the group’s ethos: sharing, even when the answer was a polite “no luck.”</li>
+                    <li><strong>Late November</strong>: The discount code saga came and went, with a resident rallying the group but coming up empty-handed. The highlight, though, was the announcement about the upcoming road closure—a reminder that even mundane updates can be vital in fostering community.</li>
+                    <li><strong>November 29-30</strong>: A flurry of posts capped the month, with conversations ranging from shared laughter (“HaHaHa…” as a participant put it) to logistical updates about room availability from another participant. It was a nice send-off to an active month.</li>
+                </ul>
 
-            <div class="col-md-4">
-                <!-- Optional sidebar content -->
-            </div>
+                <h2>Main Topics Discussed</h2>
+                <p>What Were the Main Topics Discussed This Month?</p>
+                <p>This month, the group covered everything from seeking practical advice to navigating everyday inconveniences. A resident kicked off one thread with a modern-day dilemma—a hunt for a Unidays discount code for Sony. That question might as well have been the bat signal for deal hunters, but alas, another resident’s valiant effort revealed there were no such discounts available. No victory there, but the collective effort warmed the spirit.</p>
+                <p>Meanwhile, a group member sought advice on extending kitchen cabinets, sparking a home improvement thread. It seems November was a time for getting things done—or at least planning to—with discussions also diving into practical issues like road closures near Block A/C carpark, courtesy of one member, and a participant’s query about non-Apple Store iPhone battery replacements. It was a smorgasbord of shared wisdom.</p>
+                <p>A recurring theme in the month’s discussions was the group’s focus on practicality—whether it was about finding a bargain, handling disruptions, or tackling home projects. Another participant’s big announcement about an ensuite bedroom available to rent starting December stood out as a milestone post, signaling change and opportunity.</p>
+                <p>As November unfolded, the group exhibited an admirable penchant for collective problem-solving, helping each other navigate the intricacies of daily life. From sharing knowledge about tech issues to offering suggestions on personal projects, the sense of camaraderie remained strong.</p>
+
+                <h2>General Sentiment</h2>
+                <p>The overall mood was optimistic and pragmatic. People approached challenges—whether finding a discount code, dealing with road closures, or renting a room—with a mix of curiosity and practicality. There’s something uplifting about a group that doesn’t wallow in complaints but instead looks for solutions.</p>
+                <p>Humor cropped up sporadically, adding levity to the conversations. A participant’s “HaHaHa…” and another resident’s candid updates about failed searches reminded us that even small frustrations can be handled with a smile.</p>
+
+                <h2>Closing Thoughts</h2>
+                <p>November’s group chat was a microcosm of modern life: busy, varied, and deeply human. From kitchen renovations to tech fixes, the month highlighted how community—even a virtual one—plays a vital role in helping us navigate our daily lives. And if nothing else, it’s clear that this group knows how to keep things lively while staying focused on what matters.</p>
+                <p>Here’s to more shared laughs, helpful advice, and perhaps a successful hunt for discount codes in December.</p>
+            </article>
         </div>
     </main>
 
@@ -43,5 +52,16 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        fetch('../navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => document.getElementById('navbar').innerHTML = data)
+            .catch(error => console.error('Error fetching navbar:', error));
+    </script>
 </body>
 </html>
